@@ -1,3 +1,7 @@
+
+https://github.com/destan19/openfros2
+
+回到旧一点的版本，新版本不稳定，插件编译中
 fros固件openwrt框架源码，通过该源码编译出来的固件可以安装应用过滤、上网审计、上网认证、游戏管控等fros插件  
 
 ## 如何编译
