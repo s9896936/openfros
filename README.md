@@ -1,9 +1,7 @@
 
-https://github.com/destan19/openfros2
-
-回到旧一点的版本，新版本不稳定，插件编译中
 fros固件openwrt框架源码，通过该源码编译出来的固件可以安装应用过滤、上网审计、上网认证、游戏管控等fros插件  
 
+编译脚本和ipk持续更新中  
 ## 如何编译
 > 编译方法和openwrt编译方法一样
 
@@ -12,6 +10,8 @@ fros固件openwrt框架源码，通过该源码编译出来的固件可以安装
 git clone https://github.com/destan19/openfros.git
 ```
 2. 下载安装第三方包(feeds)
+如果你想要集成第三方插件，可以在feeds config文件中增加，或者直接放在package目录  
+
 ```
 ./scripts/feeds  update -a
 ./scripts/feeds  install -a
@@ -19,18 +19,8 @@ git clone https://github.com/destan19/openfros.git
 如果这一步报错，切换网络或者搭建梯子后编译  
 
 3. 选择产品并编译固件  
-可以通过make menuconfig选择，也可以用我提供的一键编译脚本进行编译  
-默认是都是编译x86固件   
-
-**方法1:**
-```
-make V=s 
-```
-**方法2**
-```
-./build.sh
-```
-如果用一键编译脚本，并且需要修改产品，可以编辑build.sh中的配置设置想要编译的产品  
+make menuconfig 选择你要编译的产品  
+make V=s  完成固件编译
 
 ## 源码说明
 该源码基于lean 的lede源码，仓库地址  
@@ -51,22 +41,6 @@ https://github.com/coolsnowwolf/lede.git
 安装脚本为install.sh
 卸载脚本为remove.sh
 
-## 注册码获取
-> 注册机制采用本地注册，不会连接和上报设备信息到服务器，请放心使用  
-> 每个设备在fros设置中有个唯一id，请不要频繁刷机，id依赖于mac地址等硬件信息    
-> 开发也不容易，为了保持长期更新高级版本源码不开放，当然你也可以选择使用开源版本  
-
-**方式一：**  
-分享微信公众号(OpenWrt)的任意一篇文章到朋友圈，获得3个以上赞截图。  
-
-**方式二：**  
-如果你想支持下作者，可以打赏任意金额，不要超过20，打赏后截图。  
-![](https://gitee.com/destan19/picture/raw/master/picgo/202111111359022.png)  
-
-通过以上两种方式后，加微信(linux4096)直接发截图（打赏或朋友圈）和设备id  
-
-**说明：**
-应用过滤插件不注册也可以使用，只是有些限制
 
 ## 免责声明
 插件不会包含任何后门，不会窃取用户隐私数据。  
