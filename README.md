@@ -9,7 +9,7 @@ fros固件openwrt框架源码，通过该源码编译出来的固件可以安装
 ```
 git clone https://github.com/destan19/openfros.git
 ```
-2. 下载安装第三方包(feeds)
+2. 下载安装第三方包(feeds)   
 如果你想要集成第三方插件，可以在feeds config文件中增加，或者直接放在package目录  
 
 ```
